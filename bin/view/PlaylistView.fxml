@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ * Authors: 
+ * Chinmoyi Bhushan
+ * Deep Kotadia
+ -->
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PlayListController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutX="5.0" layoutY="4.0" orientation="VERTICAL" prefHeight="443.0" prefWidth="649.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TitledPane animated="false" collapsible="false" contentDisplay="CENTER" layoutX="409.0" layoutY="15.0" prefHeight="26.0" prefWidth="200.0" text="              PLAYLIST" textAlignment="RIGHT" textFill="#481ba8">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </TitledPane>
+                  <ListView fx:id="listView" layoutX="397.0" layoutY="40.0" onMouseClicked="#displayDetail" prefHeight="168.0" prefWidth="225.0" />
+                  <TextArea fx:id="detailBox" layoutX="30.0" layoutY="40.0" prefHeight="168.0" prefWidth="313.0" text=" " />
+                  <TitledPane animated="false" collapsible="false" contentDisplay="CENTER" layoutX="67.0" layoutY="15.0" prefHeight="26.0" prefWidth="239.0" text="              SONG DETAILS" textAlignment="RIGHT" textFill="#481ba8">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </TitledPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="216.0" prefWidth="647.0">
+               <children>
+                  <Button fx:id="add" layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#addDisplay" text="ADD">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="edit" layoutX="15.0" layoutY="69.0" mnemonicParsing="false" onMouseClicked="#editDisplay" text="EDIT" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="delete" layoutX="15.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#deleteDisplay" text="DELETE" visible="false">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cancel" layoutX="146.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#cancelFunction" text="CANCEL " visible="false" />
+                  <Button fx:id="ok" layoutX="261.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#okFunction" text="OK" visible="false" />
+                  <TextField fx:id="nameText" layoutX="398.0" layoutY="18.0" visible="false" />
+                  <TextField fx:id="artistText" layoutX="398.0" layoutY="57.0" visible="false" />
+                  <TextField fx:id="albumText" layoutX="398.0" layoutY="100.0" prefHeight="25.0" prefWidth="149.0" visible="false" />
+                  <TextField fx:id="yearText" layoutX="398.0" layoutY="138.0" visible="false" />
+                  <Label fx:id="songName" layoutX="226.0" layoutY="22.0" prefHeight="25.0" prefWidth="139.0" text="    Song Name:" textFill="#c91111" visible="false">
+                     <font>
+                        <Font name="Book Antiqua" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="artist" layoutX="225.0" layoutY="57.0" prefHeight="25.0" prefWidth="139.0" text="         Artist:" textFill="#2323a8" visible="false">
+                     <font>
+                        <Font name="Book Antiqua" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="album" layoutX="245.0" layoutY="100.0" prefHeight="17.0" prefWidth="88.0" text="    Album:" textFill="#e82e2e" visible="false">
+                     <font>
+                        <Font name="Book Antiqua" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="year" layoutX="245.0" layoutY="140.0" prefHeight="21.0" prefWidth="88.0" text="     Year: " textFill="#24349a" visible="false">
+                     <font>
+                        <Font name="Book Antiqua" size="16.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
